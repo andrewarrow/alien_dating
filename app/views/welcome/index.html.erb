@@ -2,19 +2,11 @@
 
 I'm from:
 <br/>
-<select>
-<% @planets.each do |planet| %>
-  <option><%= planet%></option>
-<% end %>
-</select>
-
+<%= select_tag "planets", options_for_select(@planets) %>
 <br/>
 <br/>
 
 and I want to date a creature from:
 <br/>
-<select>
-<% @planets.each do |planet| %>
-  <option><%= planet%></option>
-<% end %>
+<%= select_tag "planets", options_for_select(@planets) %>
 </select>
