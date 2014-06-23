@@ -1,16 +1,15 @@
 <h1>Alien Dating</h1>
 
-
-<%= form_for @user do |f| %>
-	<%= f.text_field :name %>
-	I'm from:
-	<%= select_tag :from_planet, options_for_select(@planets) %>
-	and I want to date a creature from:
-	<%= select_tag :wants_planet, options_for_select(@planets) %>
-	<br>
-	<%= f.submit "Create" %>
+<%= form_for @user, url: create_account_path, html: {method: 'post'} do |f| %>
+  Name: <%= f.text_field :name %>
+  <br/>
+  <br/>
+  I'm from:
+  <%= select_tag :from_planet, options_for_select(@planets) %>
+  and I want to date a creature from:
+  <%= select_tag :wants_planet, options_for_select(@planets) %>
+  <br>
+  <%= f.submit "Create" %>
 <% end %>
 
 
-<br/>
-<br/>
