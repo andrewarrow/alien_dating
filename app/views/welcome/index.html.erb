@@ -5,9 +5,9 @@
   <br/>
   <br/>
   I'm from:
-  <%= select_tag :from_planet, options_for_select(@planets) %>
+  <%= f.select :from_planet, options_for_select(@planets) %>
   and I want to date a creature from:
-  <%= select_tag :wants_planet, options_for_select(@planets) %>
+  <%= f.select :wants_planet, options_for_select(@planets) %>
   <br>
   <%= f.submit "Create" %>
 <% end %>
