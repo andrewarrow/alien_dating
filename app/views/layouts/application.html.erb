@@ -2,14 +2,24 @@
 <html>
 <head>
   <title>AlienDating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <body>
+    <div class="container" style="">
 
-<%= yield %>
+      <div class="row" style="margin: 30px 0 0 0;">
+        <div class="col-sm-4" style="padding: 10px;">
+          Alien Dating
+        </div>
+        <div class="col-sm-5">
+          <%= link_to "Click here to see all users", users_path %>
+        </div>
+      </div>
 
-<%= link_to "Click here to see all users", users_path %>
-</body>
+      <%= yield %>
+    </div>
+  </body>
 </html>
