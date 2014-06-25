@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :users
+
+  get 'users/show'
+
   root 'welcome#index'
   post '/create_account' => 'welcome#create_account'
 

@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
     # raise params.inspect
     @user = User.new(user_params)
     if @user.save
-    	render :text => 'thanks for signing up!'
+    	redirect_to users_show_path
     else
     	render 'new'
     end
