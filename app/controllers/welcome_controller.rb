@@ -10,12 +10,11 @@ class WelcomeController < ApplicationController
     # raise params.inspect
     @user = User.new(user_params)
     if @user.save
+      # we use this to show dynamic users
     	redirect_to user_path(@user)
     else
     	render 'new'
     end
-
-
   end
 
   private
