@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def show
-    @app_name = "Alien Dating"
+    @user = User.find(params[:id])
   end
 end
