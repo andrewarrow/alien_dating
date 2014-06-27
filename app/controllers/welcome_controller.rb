@@ -10,6 +10,7 @@ class WelcomeController < ApplicationController
     # raise params.inspect
     @user = User.new(user_params)
     if @user.save
+      session[:user] = @user.id
       # we use this to show dynamic users
     	redirect_to user_path(@user)
     else
@@ -17,8 +18,17 @@ class WelcomeController < ApplicationController
     end
   end
 
+  def logout
+    # *only used for development and not deployment*
+    # raise session.inspect
+    session[:user] = nil
+    redirect_to root_path
+  end
+
   private
+
   	def user_params
 			params.require(:user).permit(:name, :from_planet, :wants_planet)
 		end
+
 end

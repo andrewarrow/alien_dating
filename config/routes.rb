@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   post '/create_account' => 'welcome#create_account'
+  post '/logout' => 'welcome#logout'
 
   #resources :users
 
