@@ -15,7 +15,13 @@
           <%= link_to logo, root_path %>
         </div>
         <div class="col-sm-5">
-          <%= link_to "Click here to see all users", users_path %>
+          <% if current_user %>
+            <%= link_to "All Users", users_path %>
+            |
+            <%= link_to 'Logout', '/logout', method: 'post' %>
+          <% else %>
+            <%= link_to 'Already have an account?', '/' %>
+          <% end %>
         </div>
       </div>
 
