@@ -7,7 +7,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-  <body>
+  <body class="layout">
     <div class="container" style="">
 
       <div class="row" style="margin: 30px 0 0 0;">
@@ -17,10 +17,12 @@
         <div class="col-sm-5">
           <% if current_user %>
             <%= link_to "All Users", users_path %>
-            |
+            | 
             <%= link_to 'Logout', '/logout', method: 'post' %>
           <% else %>
-            <%= link_to 'Already have an account?', '/' %>
+            <%= link_to 'Already have an account?', '/login' %>
+            | 
+            <%= link_to 'Create new account', root_path %>
           <% end %>
         </div>
       </div>

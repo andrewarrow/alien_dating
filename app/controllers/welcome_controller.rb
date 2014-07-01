@@ -20,6 +20,15 @@ class WelcomeController < ApplicationController
     redirect_to root_path
   end
 
+  def login_user
+    if @user = User.authenticate(params[:id])
+      session[:user_id] = user.id
+      redirect_to user_path(@user)
+    else
+      render 'new'
+    end
+  end
+
   private
 
   def user_params
