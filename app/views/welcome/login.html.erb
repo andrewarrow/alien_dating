@@ -4,7 +4,7 @@
 <%= form_tag '/login', method: 'post' do %>
   Name:
   <br/>
-    <%= select_tag :user_id, options_for_select(@users) %>
+    <%= select_tag :user_id, options_for_select(User.all.collect{|u| [u.name, u.id]}) %>
   <br/>
   <br/>
   <%= submit_tag 'Login' %>

@@ -25,7 +25,7 @@ class WelcomeController < ApplicationController
   end
 
   def login_user
-    user = User.find_by_name(params[:user_id])
+    user = User.find_by_id(params[:user_id])
     if user
       session[:user_id] = user.id
       redirect_to user_path(user)
