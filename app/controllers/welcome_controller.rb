@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @planets = ['mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune']
+    @planets = Planet.all
     @user = User.new
   end
 

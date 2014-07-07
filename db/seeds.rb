@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 names = ["Noah", "Sophia", "Liam", "Emma", "Jacob", "Olivia", "Mason", "Isabella", "William", "Ava"]
-planets = ['mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune']
+planets = Planet.all
 about_me = ['I am a blonde haired alien with big eyes', 'I am a short alien with a nice smile', 'I am a tall alien with big muscles',
             'I am a brunette alient with a nice smile', 'I a red haired alien with pretty eyes']
 what_i_want = ['I am looking for a short alien with a nice smile', 'I am looking for a tall alien with big eyes', 'I am looking for a muscular alien',
