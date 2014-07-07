@@ -20,11 +20,8 @@ class WelcomeController < ApplicationController
     redirect_to root_path
   end
 
-  def login
-    @users = User.all.map { |u| u.name }
-  end
-
   def login_user
+    @user = User.all.collect{|u| [u.name, u.id]}
     user = User.find_by_id(params[:user_id])
     if user
       session[:user_id] = user.id

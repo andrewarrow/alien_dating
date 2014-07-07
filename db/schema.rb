@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140623153500) do
+ActiveRecord::Schema.define(version: 20140703211315) do
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "wants_planet"
     t.string   "from_planet"
     t.datetime "created_at"
+    t.string   "about_me"
+    t.string   "what_i_want"
   end
 
 end
