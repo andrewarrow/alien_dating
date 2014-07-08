@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     # stores information about a specific user
     @user = User.find(params[:id])
+    @is_logged_in_user = current_user && current_user.id == @user.id
   end
 
   def edit

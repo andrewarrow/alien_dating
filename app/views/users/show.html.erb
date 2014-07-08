@@ -1,4 +1,4 @@
-<% if @user.id == current_user.id %>
+<% if @is_logged_in_user %>
 <p>Hello, welcome to the app <%= @user.name %>. Below is your profile:</p>
 <% end %>
 
@@ -7,13 +7,11 @@ This is the profile page of user: <%= @user.name %>
 <br>
 
 <div class="user_info">
-<% if @user.id != current_user.id %>
 <p>User Information:</p><%= @user.about_me %>
 <br><br>
 <p>User Preferance:</p><%= @user.what_i_want %>
-<% end %>
 </div>
 
-<% if @user.id == current_user.id %>
+<% if @is_logged_in_user %>
 <%= link_to "Edit Profile", edit_user_path %>
 <% end %>
