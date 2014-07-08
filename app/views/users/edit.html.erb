@@ -1,0 +1,11 @@
+<h4>Edit Profile</h4>
+
+<%= form_for @user, url: update_path, html: {method: 'post'} do |f| %>
+  <%= f.label :about_me %> <br>
+  <%= f.text_field :about_me %>
+  <br> <br>
+  <%= f.label :what_i_want %> <br>
+  <%= f.text_field :what_i_want %>
+  <br> <br>
+  <%= f.submit "Save Changes" %>
+<% end %>

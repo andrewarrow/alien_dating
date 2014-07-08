@@ -13,3 +13,8 @@
 .menu_bar {
   float: right;
 }
+
+.user_info {
+  position: relative;
+  left: 50em;
+}

@@ -3,3 +3,17 @@
 <% end %>
 
 This is the profile page of user: <%= @user.name %>
+<br>
+<br>
+
+<div class="user_info">
+<% if @user.id != current_user.id %>
+<p>User Information:</p><%= @user.about_me %>
+<br><br>
+<p>User Preferance:</p><%= @user.what_i_want %>
+<% end %>
+</div>
+
+<% if @user.id == current_user.id %>
+<%= link_to "Edit Profile", edit_user_path %>
+<% end %>

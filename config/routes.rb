@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   resources :users
 
   root 'welcome#index'
-  post '/create_account' => 'welcome#create_account'
-  post '/logout' => 'welcome#logout'
-  get  '/login' => 'welcome#login'
-  post '/login' => 'welcome#login_user'
+  post '/create_account'  => 'welcome#create_account'
+  post '/logout'          => 'welcome#logout'
+  get  '/login'           => 'welcome#login'
+  post '/login'           => 'welcome#login_user'
+  post '/update'          => 'welcome#update'
 
 
   #resources :users

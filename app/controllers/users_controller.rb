@@ -7,4 +7,9 @@ class UsersController < ApplicationController
     # stores information about a specific user
     @user = User.find(params[:id])
   end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
 end
