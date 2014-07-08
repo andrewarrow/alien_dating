@@ -1,6 +1,6 @@
 <h4>Edit Profile</h4>
 
-<%= form_for @user, url: update_path, html: {method: 'post'} do |f| %>
+<%= form_for @user, url: user_path(@user), html: {method: 'patch'} do |f| %>
   <%= f.label :about_me %> <br>
   <%= f.text_field :about_me %>
   <br> <br>

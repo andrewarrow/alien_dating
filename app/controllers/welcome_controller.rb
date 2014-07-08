@@ -33,15 +33,6 @@ class WelcomeController < ApplicationController
     redirect_to root_path
   end
 
-  def update
-    @user = User.find(current_user.id)
-    if @user.update_attributes(user_params)
-      redirect_to user_path(@user)
-    else
-      render 'edit'
-    end
-  end
-
   private
 
   def user_params

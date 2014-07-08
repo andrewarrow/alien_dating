@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   post '/logout'          => 'welcome#logout'
   get  '/login'           => 'welcome#login'
   post '/login'           => 'welcome#login_user'
-  post '/update'          => 'welcome#update'
-
 
   #resources :users
 

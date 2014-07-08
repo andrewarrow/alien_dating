@@ -13,4 +13,20 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def update
+    @user = User.find(current_user.id)
+    if @user.update_attributes(user_params)
+      redirect_to user_path(@user)
+    else
+      flash[:error] = 'Sorry, there was an error.'
+      redirect_to edit_user_path(@user)
+    end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:about_me, :what_i_want)
+  end
+
 end
