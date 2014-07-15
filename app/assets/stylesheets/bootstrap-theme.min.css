@@ -16,5 +16,15 @@
 
 .user_info {
   position: relative;
-  left: 50em;
+  float: right;
+}
+
+.request {
+  position: relative;
+  float: left;
+  padding-top: 10px;
+}
+
+.col-sm-5 {
+  float: right;
 }

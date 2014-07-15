@@ -17,5 +17,15 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 
 .user_info {
   position: relative;
-  left: 50em;
+  float: right;
+}
+
+.request {
+  position: relative;
+  float: left;
+  padding-top: 10px;
+}
+
+.col-sm-5 {
+  float: right;
 }

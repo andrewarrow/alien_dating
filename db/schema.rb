@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703211315) do
+ActiveRecord::Schema.define(version: 20140715035624) do
+
+  create_table "meetup_requests", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meetup_requests", ["user_id"], name: "index_meetup_requests_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

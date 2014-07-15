@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/logout'          => 'welcome#logout'
   get  '/login'           => 'welcome#login'
   post '/login'           => 'welcome#login_user'
+  patch '/meetup_request' => 'users#meetup_request'
 
   #resources :users
 

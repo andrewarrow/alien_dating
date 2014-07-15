@@ -23,6 +23,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def meetup_request
+    @user = User.find(current_user.id)
+    @meetup_request = current_user.user_id.build(params[:id])
+    if @meetup_request.save
+      flash[:success] = 'Request Submitted'
+      redirect_to user_path(@user)
+    else
+      flash[:error] = 'Unable to send request'
+      redirect_to user_path(@user)
+    end
+  end
+
   private
 
   def user_params
